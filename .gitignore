@@ -2,6 +2,8 @@
 
 # compiled output
 *
-!*.proto
-!bp
+!/*.proto
+!*/
+!**/*.proto
+
 !.gitignore
