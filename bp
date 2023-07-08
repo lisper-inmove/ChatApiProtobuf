@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PROTO_DIR="."
+
+OUT_DIR="."
+
+mkdir -p $OUT_DIR
+
+for PROTO_FILE in $PROTO_DIR/*.proto
+do
+  BASE_NAME=$(basename $PROTO_FILE .proto)
+  echo "Generate grpc for $PROTO_FILE"
+  python -m grpc_tools.protoc --python_out=$OUT_DIR --grpc_python_out=$OUT_DIR -I. $PROTO_FILE
+done
