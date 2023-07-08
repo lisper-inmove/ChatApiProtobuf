@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package chatgpt.chat_completion;
+
+service ChatCompletion {
+  // 客户端发一条消息,服务端回数组消息
+  rpc Chat(ChatRequest) returns (stream ChatResponse);
+}
+
+message ChatRequest {
+  repeated ChatMessage messages = 1;
+}
+
+message ChatMessage {
+  string role = 1;
+  string content = 2;
+}
+
+message ChatResponse {
+  message Choice {
+    message Delta {
+      string role = 1;
+      string content = 2;
+    }
+    int32 index = 1;
+    string finish_reason = 2;
+    Delta delta = 3;
+  }
+  string id = 1;
+  string object = 2;
+  int64 created = 3;
+  repeated Choice choices = 4;
+}
+
