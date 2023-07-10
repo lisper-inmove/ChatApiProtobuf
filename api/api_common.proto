@@ -16,11 +16,11 @@ message PingRequest {
 
 }
 
-message BindSessionIdRequest {
+message BindSessionRequest {
   string id = 1;
 }
 
-message BindSessionIdResponse {
+message BindSessionResponse {
   string id = 1;
 }
 
