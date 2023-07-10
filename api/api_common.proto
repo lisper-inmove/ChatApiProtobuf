@@ -16,12 +16,4 @@ message PingRequest {
 
 }
 
-message BindSessionRequest {
-  string id = 1;
-}
-
-message BindSessionResponse {
-  string id = 1;
-}
-
 message PingResponse {}
