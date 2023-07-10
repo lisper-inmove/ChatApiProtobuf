@@ -21,4 +21,5 @@ message PingResponse {}
 message Protocol {
   int32 action = 1;
   string content = 2;
+  string errmsg = 3;
 }
