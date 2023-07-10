@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package chat;
+package chitchat;
 
-message Chat {
+message Chitchat {
   enum Status {
     CREATED = 0;
     DELETED = 1;
@@ -20,7 +20,7 @@ message Chat {
   int64 updateTime = 7;
 }
 
-message ChatSetting {
+message ChitchatSetting {
   string chatId = 1;
   // 如果是普通的CHAT则是空字符串
   // 如果是ROLE则用于chatgpt api 中的 system role
@@ -29,7 +29,7 @@ message ChatSetting {
   int64 updateTime = 4;
 }
 
-message ChatMessage {
+message ChitchatMessage {
   string id = 1;
   string chatId = 2;
   int64 createTime = 3;

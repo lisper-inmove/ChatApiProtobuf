@@ -4,34 +4,34 @@ package api.chitchat;
 
 
 // 聊天
-message CreateChatRequest {
+message CreateChitchatRequest {
   string name = 1;
   string type = 2;
 }
 
-message UpdateChatRequest {
+message UpdateChitchatRequest {
   string id = 1;
   string name = 2;
   string token = 3;
 }
 
-message DeleteChatRequest {
+message DeleteChitchatRequest {
   string id = 1;
   string token = 2;
 }
 
-message ListChatRequest {
+message ListChitchatRequest {
   string token = 1;
   int64 lastCreateTime = 2;
 }
 
-message ChatCommonResponse {
+message ChitchatCommonResponse {
   string role = 1;
   string content = 2;
 }
 
-message ListChatResponse {
-  repeated ChatCommonResponse chats = 1;
+message ListChitchatResponse {
+  repeated ChitchatCommonResponse chats = 1;
 }
 
 message CreateMessageRequest {
