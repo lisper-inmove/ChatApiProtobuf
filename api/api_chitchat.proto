@@ -6,6 +6,7 @@ package api.chitchat;
 // 聊天
 message CreateChitchatRequest {
   string name = 1;
+  string description = 2;
   string type = 2;
 }
 
