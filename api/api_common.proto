@@ -19,6 +19,6 @@ message PingRequest {
 message PingResponse {}
 
 message Protocol {
-  string protocol = 1;
+  int32 protocol = 1;
   string content = 2;
 }
