@@ -8,12 +8,11 @@ service ChatGPT {
 }
 
 message ChatCompletionRequest {
+  message ChatCompletionMessage {
+    string role = 1;
+    string content = 2;
+  }
   repeated ChatCompletionMessage messages = 1;
-}
-
-message ChatCompletionMessage {
-  string role = 1;
-  string content = 2;
 }
 
 message ChatCompletionResponse {
