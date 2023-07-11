@@ -2,21 +2,21 @@ syntax = "proto3";
 
 package chatgpt.chat_completion;
 
-service ChatCompletion {
+service ChatGPT {
   // 客户端发一条消息,服务端回数组消息
-  rpc Chat(ChatRequest) returns (stream ChatResponse);
+  rpc ChatCompletion(ChatCompletionRequest) returns (stream ChatCompletionResponse);
 }
 
-message ChatRequest {
-  repeated ChatMessage messages = 1;
+message ChatCompletionRequest {
+  repeated ChatCompletionMessage messages = 1;
 }
 
-message ChatMessage {
+message ChatCompletionMessage {
   string role = 1;
   string content = 2;
 }
 
-message ChatResponse {
+message ChatCompletionResponse {
   message Choice {
     message Delta {
       string role = 1;
@@ -31,4 +31,3 @@ message ChatResponse {
   int64 created = 3;
   repeated Choice choices = 4;
 }
-
