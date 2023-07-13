@@ -23,3 +23,18 @@ message Protocol {
   string content = 2;
   string errmsg = 3;
 }
+
+enum ProtocolNumber {
+  PING = 0;
+  POPUP_ERROR = 1;
+  LOGIN = 100;
+  SIGN_UP = 101;
+  TOKEN_AUTHORIZE = 102;
+  CREATE_MESSAGE = 103;
+  UPDATE_MESSAGE = 104;
+  LIST_MESSAGE = 105;
+  CREATE_CHITCHAT = 106;
+  UPDATE_CHITCHAT = 107;
+  DELETE_CHITCHAT = 108;
+  LIST_CHITCHAT = 109;
+}
