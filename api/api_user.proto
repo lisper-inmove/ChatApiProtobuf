@@ -12,6 +12,11 @@ message UserLoginRequest {
   string password = 2;
 }
 
+// 通过token做认证
+message TokenAuthorizeRequest {
+  string token = 1;
+}
+
 message UserCommonResponse {
   string username = 1;
   string token = 2;
