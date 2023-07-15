@@ -13,6 +13,7 @@ message CreateChitchatRequest {
 message UpdateChitchatRequest {
   string id = 1;
   string name = 2;
+  string description = 3;
 }
 
 message DeleteChitchatRequest {
@@ -26,6 +27,8 @@ message ListChitchatRequest {
 message ChitchatCommonResponse {
   string role = 1;
   string content = 2;
+  string type = 3;
+  string description = 4;
 }
 
 message ListChitchatResponse {
