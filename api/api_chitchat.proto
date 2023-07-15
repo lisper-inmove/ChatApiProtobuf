@@ -38,6 +38,7 @@ message ListChitchatResponse {
 message CreateMessageRequest {
   string role = 1;
   string content = 2;
+  string chitchatId = 3;
 }
 
 message CreateMessageResponse {
