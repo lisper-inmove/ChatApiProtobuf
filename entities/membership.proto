@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package membership;
+package entity.membership;
 
 message Membership {
   string userId = 1;

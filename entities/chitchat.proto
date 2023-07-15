@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package chitchat;
+package entity.chitchat;
 
 message Chitchat {
   enum Status {
