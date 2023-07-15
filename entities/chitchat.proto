@@ -23,7 +23,9 @@ message Chitchat {
 
 message ChitchatMessage {
   string id = 1;
-  string chatId = 2;
+  string chitchatId = 2;
   int64 createTime = 3;
   int64 updateTime = 4;
+  string content = 5;
+  bool isResponse = 6;
 }
