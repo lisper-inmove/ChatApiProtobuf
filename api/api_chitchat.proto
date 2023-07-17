@@ -48,3 +48,21 @@ message CreateMessageResponse {
   bool isContinue = 4;
   bool isFinished = 5;
 }
+
+message ListChitchatMessageRequest {
+  string chitchatId = 1;
+}
+
+message ListChitchatMessageResponse {
+  message ListChitchatMessage {
+    string id = 1;
+    string content = 2;
+    string isResponse = 3;
+    string role = 4;
+  }
+  repeated ListChitchatMessage messages = 1;
+}
+
+message StopGenerateRequest {
+
+}
