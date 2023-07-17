@@ -22,10 +22,18 @@ message Chitchat {
 }
 
 message ChitchatMessage {
+  enum Role {
+    USER = 0;
+    SYSTEM = 1;
+    ASSISTANT = 2;
+    FUNCTION = 3;
+  }
   string id = 1;
   string chitchatId = 2;
   int64 createTime = 3;
   int64 updateTime = 4;
   string content = 5;
-  bool isResponse = 6;
+  // 上一条消息的ID
+  string previousId = 6;
+  Role role = 7;
 }

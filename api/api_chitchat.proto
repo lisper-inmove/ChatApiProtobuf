@@ -66,3 +66,9 @@ message ListChitchatMessageResponse {
 message StopGenerateRequest {
 
 }
+
+// 重新生成
+message RegenerateRequest {
+  string chitchatId = 1;
+  string messageId = 2;
+}
