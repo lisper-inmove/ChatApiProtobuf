@@ -44,6 +44,7 @@ enum Action {
 }
 
 enum ErrorCode {
-  POPUP_ERROR = 0;
+  SUCCESS = 0;
+  POPUP_ERROR = 1;
   TOKEN_AUTHORIZE_EXPIRED = 2;
 }
