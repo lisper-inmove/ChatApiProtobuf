@@ -12,13 +12,19 @@ message PopupErrorResponse {
   string error = 2;
 }
 
-message Action {
-  ActionName name  = 1;
-  string content = 2;
-  string errmsg = 3;
+message Request {
+  Action action = 1;
+  string content = 2;  // jsonify content
 }
 
-enum ActionName {
+message Response {
+  Action action = 1;
+  string content = 2;  // jsonify content
+  ErrorCode errcode = 3;
+  string errmsg = 4;
+}
+
+enum Action {
   PING = 0;
   LOGIN = 100;
   SIGN_UP = 101;
