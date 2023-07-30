@@ -20,7 +20,6 @@ message Action {
 
 enum ActionName {
   PING = 0;
-  POPUP_ERROR = 1;
   LOGIN = 100;
   SIGN_UP = 101;
   TOKEN_AUTHORIZE = 102;
@@ -36,4 +35,9 @@ enum ActionName {
 
   STOP_GENERATE = 110;
   REGENERATE = 111;
+}
+
+enum ErrorCode {
+  POPUP_ERROR = 0;
+  TOKEN_AUTHORIZE_EXPIRED = 2;
 }
