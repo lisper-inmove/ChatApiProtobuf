@@ -41,6 +41,9 @@ enum Action {
 
   STOP_GENERATE = 110;
   REGENERATE = 111;
+
+  EMBEDDING_PDF = 1;
+  EMBEDDING_QUERY_TEXT = 2;
 }
 
 enum ErrorCode {
