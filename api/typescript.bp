@@ -25,19 +25,29 @@
 
 #!/bin/bash
 
-# Directory containing .proto files
-PROTO_DIR="."
+# # Directory containing .proto files
+# PROTO_DIR="."
+# 
+# # Output JavaScript file
+# JS_FILE="./api.js"
+# 
+# # Output TypeScript definition file
+# TS_FILE="./api.d.ts"
+# 
+# # Compile .proto files into a single JavaScript file
+# # npx pbjs -t static-module -w commonjs -o $JS_FILE $PROTO_DIR/*.proto
+# 
+# # Generate TypeScript definition file from the JavaScript file
+# # npx pbts -o $TS_FILE $JS_FILE
+# 
+# npx pbjs --ts ./api.ts *.proto
 
-# Output JavaScript file
-JS_FILE="./api.js"
+# Iterate over each .proto file in the current directory
+for protofile in *.proto; do
+  # Extract the filename without the extension
+  filename="${protofile%.*}"
 
-# Output TypeScript definition file
-TS_FILE="./api.d.ts"
+  # Execute the command for the current file
+  npx pbjs --ts ./"$filename.ts" "$protofile"
+done
 
-# Compile .proto files into a single JavaScript file
-# npx pbjs -t static-module -w commonjs -o $JS_FILE $PROTO_DIR/*.proto
-
-# Generate TypeScript definition file from the JavaScript file
-# npx pbts -o $TS_FILE $JS_FILE
-
-npx pbjs --ts ./api.ts *.proto
