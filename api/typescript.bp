@@ -35,7 +35,9 @@ JS_FILE="./api.js"
 TS_FILE="./api.d.ts"
 
 # Compile .proto files into a single JavaScript file
-npx pbjs -t static-module -w commonjs -o $JS_FILE $PROTO_DIR/*.proto
+# npx pbjs -t static-module -w commonjs -o $JS_FILE $PROTO_DIR/*.proto
 
 # Generate TypeScript definition file from the JavaScript file
-npx pbts -o $TS_FILE $JS_FILE
+# npx pbts -o $TS_FILE $JS_FILE
+
+npx pbjs --ts ./api.ts *.proto

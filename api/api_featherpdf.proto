@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api.featherpdf;
+
+message EmbeddingPdfRequest {
+  string fileUrl = 1;
+  string filename = 2;
+  string indexName = 3;
+  string fileId = 4;
+}
+
+message QueryTextRequest {
+  string text = 1;
+  string indexName = 2;
+  string fileId = 3;
+}
+
+message FeatherpdfCommonResponse {}
