@@ -44,6 +44,7 @@ enum Action {
 
   EMBEDDING_PDF = 1;
   EMBEDDING_QUERY_TEXT = 2;
+  EMBEDDING_QUERY_RESPONSE = 3;
 }
 
 enum ErrorCode {

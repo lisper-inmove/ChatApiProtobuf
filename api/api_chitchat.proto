@@ -29,6 +29,9 @@ message ChitchatCommonResponse {
   string content = 2;
   string type = 3;
   string description = 4;
+  string finishReason = 5;
+  int32 index = 6;
+  string model = 7;
 }
 
 message ListChitchatResponse {
