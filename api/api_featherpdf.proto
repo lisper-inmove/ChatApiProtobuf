@@ -9,6 +9,10 @@ message EmbeddingPdfRequest {
   string fileId = 4;
 }
 
+message EmbeddingPdfResponse {
+  string conspectus = 1;
+}
+
 message QueryTextRequest {
   string text = 1;
   string indexName = 2;
