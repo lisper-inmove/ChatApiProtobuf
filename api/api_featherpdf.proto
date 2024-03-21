@@ -2,6 +2,17 @@ syntax = "proto3";
 
 package api.featherpdf;
 
+message ReadPdfRequest {
+  string fileId = 1;
+  string fileUrl = 2;
+}
+
+message ReadPdfResponse {
+  int32 preliminaryPages = 1;
+  string tableOfContent = 2;
+  int32 pageNums = 3;
+}
+
 message EmbeddingPdfRequest {
   string fileUrl = 1;
   string filename = 2;
